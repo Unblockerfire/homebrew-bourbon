@@ -1,0 +1,24 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test-bot:
+    runs-on: macos-latest
+    steps:
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: Check out tap
+        uses: actions/checkout@v4
+        with:
+          path: Library/Taps/unblockerfire/homebrew-bourbon
+
+      - name: Audit Bourbon cask
+        run: brew audit --cask --tap=unblockerfire/bourbon bourbon || true
+
+      - name: Style Bourbon cask
+        run: brew style --cask bourbon || true
