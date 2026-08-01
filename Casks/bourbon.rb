@@ -12,6 +12,12 @@ cask "bourbon" do
 
   app "Bourbon.app"
 
+  postflight do
+    system_command "/usr/bin/open",
+                   args: ["/Applications/Bourbon.app"],
+                   sudo: false
+  end
+
   zap trash: [
     "~/Library/Application Support/com.unblockerfire.Bourbon",
     "~/Library/Caches/com.unblockerfire.Bourbon",
