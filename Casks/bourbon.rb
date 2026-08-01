@@ -1,14 +1,14 @@
 cask "bourbon" do
-  version "1.0.0"
-  sha256 :no_check
+  version "2.0.4"
+  sha256 "1cba0f2f05e73b61383d7203a2b3b6395761591123569ec2a0320ef96b2231b5"
 
-  url "https://github.com/Unblockerfire/Bourbon/releases/download/v#{version}/Bourbon-#{version}.dmg"
+  url "https://github.com/Unblockerfire/Bourbon/releases/download/v#{version}/Bourbon#{version}.dmg"
   name "Bourbon"
-  desc "Modern continuation of Whisky for running Windows apps on macOS"
-  homepage "https://github.com/Unblockerfire/Bourbon"
+  desc "Native macOS app for running Windows applications"
+  homepage "https://getbourbon.app"
 
   depends_on arch: :arm64
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Bourbon.app"
 
