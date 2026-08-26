@@ -1,6 +1,6 @@
 cask "bourbon" do
-  version "2.0.9"
-  sha256 "0bc128b2722ab58384c423de12208a7675024cfe1cfe5a700545607228beea5d"
+  version "2.0.10"
+  sha256 "38d089dc5ab99068206a6cc2922a3951deccf3589d0645178df07b516412f710"
 
   url "https://github.com/Unblockerfire/Bourbon/releases/download/v#{version}/Bourbon#{version}.dmg"
   name "Bourbon"
