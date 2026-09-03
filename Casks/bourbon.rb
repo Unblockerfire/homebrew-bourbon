@@ -7,6 +7,8 @@ cask "bourbon" do
   desc "Native macOS app for running Windows applications"
   homepage "https://getbourbon.app"
 
+  disable! date: "2026-09-02", because: "Bourbon downloads are temporarily paused while a runtime fix is being validated."
+
   depends_on arch: :arm64
   depends_on macos: :sonoma
 
